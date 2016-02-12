@@ -4,9 +4,9 @@ Telegraf plugin for FreeSWITCH
 
 FreeSWITCH-Telegraf-Metrics is a Python application that collect the following FreeSWITCH metrics:
 
-    - Total of active channels
-    - Total of calls
-    - Current CPS
+- Total of active channels
+- Total of calls
+- Current CPS
 
 This plugin uses Telegraf exec input plugin to execute abritary commands, see https://github.com/influxdata/telegraf/tree/master/plugins/inputs/exec
 
@@ -54,10 +54,10 @@ Add in your /etc/telegraf/telegraf.conf file the following config::
 
 You will need to edit the following settings in freeswitch_metrics.py to match your XML RPC FreeSWITCH configuration:
 
-    - FS_HOST - default: localhost
-    - FS_PORT - default: 8080
-    - FS_USERNAME - default: freeswitch
-    - FS_PASSWORD - default: works
+- FS_HOST: FreeSWITCH XML RPC hostname (default: localhost)
+- FS_PORT: FreeSWITCH XML RPC port - default: 8080
+- FS_USERNAME: FreeSWITCH XML RPC username - default: freeswitch
+- FS_PASSWORD: FreeSWITCH XML RPC password - default: works
 
 Don't forget to enable FreeSWITCH XML RPC module (https://freeswitch.org/confluence/display/FREESWITCH/mod_xml_rpc)!
 
@@ -67,9 +67,9 @@ Collected Metrics
 
 You will now have 3 metrics collected and pushed by Grafana:
 
-    - active_channels
-    - active_calls
-    - cps
+- active_channels
+- active_calls
+- cps
 
 
 License
