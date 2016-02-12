@@ -9,7 +9,7 @@ This script collects the following FreeSWITCH metrics:
 
 Usage:
 
-    export FS_HOST="localhost"; export FS_PORT=8080; export FS_USERNAME="freeswitch"; export FS_PASSWORD="works"
+    export FS_HOST=localhost; export FS_PORT=8080; export FS_USERNAME=freeswitch; export FS_PASSWORD=works
     ./freeswitch_metrics.py
 
 """
@@ -91,6 +91,8 @@ if __name__ == "__main__":
     if DEMO_MODE:
         dt = datetime.now()
         n_calls = dt.minute
-        print("{\"active_channels\": %d, \"active_calls\": %d}" % (n_calls, n_calls))
+        sessions = dt.minute
+        cps = dt.second
+        print("{\"active_channels\": %d, \"active_calls\": %d, \"cps\": %d}" % (sessions, n_calls, cps))
     else:
         print_statics()
