@@ -25,7 +25,7 @@ Installation
 
 There is no PIP package for this plugins, please open a PR/Issue if you feel the need for one.
 
-You can install the telegraf plugin script as follow:
+You can install the telegraf plugin script as follow::
 
     mkdir /opt/freeswitch-telegraf-plugin/
     cd /opt/freeswitch-telegraf-plugin/
