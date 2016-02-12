@@ -30,6 +30,7 @@ You can install the telegraf plugin script as follow::
     mkdir /opt/freeswitch-telegraf-plugin/
     cd /opt/freeswitch-telegraf-plugin/
     wget https://raw.githubusercontent.com/areski/freeswitch-telegraf-plugin/master/freeswitch_metrics.py
+    chmod +x freeswitch_metrics.py
 
 
 Configuration
@@ -41,6 +42,9 @@ Add in your /etc/telegraf/telegraf.conf file the following config::
 
     # Read flattened metrics from one or more commands that output JSON to stdout
     [[inputs.exec]]
+      # Set interval to 1s
+      interval = "1s"
+
       # the command to run
       command = "/opt/freeswitch-telegraf-plugin/freeswitch_metrics.py"
 
